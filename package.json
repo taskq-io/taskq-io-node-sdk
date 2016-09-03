@@ -1,6 +1,6 @@
 {
   "name": "taskq.io",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "TaskQ.io SDK",
   "main": "index.js",
   "scripts": {

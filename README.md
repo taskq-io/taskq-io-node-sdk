@@ -5,7 +5,7 @@ This is [TaskQ.io](https://taskq.io) SDK for Node.js.
 To install the SDK in your project, use:
 
 ```
-npm install taskq --save
+npm install taskq.io --save
 ```
 
 # Usage
