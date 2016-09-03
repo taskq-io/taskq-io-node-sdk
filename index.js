@@ -1,13 +1,24 @@
 var https = require('https'),
+	apiKey = process.env.TASKQ_API_KEY,
+	authorizationHeader = 'Bearer ' + process.env.TASKQ_API_KEY,
 	options = getHttpsOptions(process.env.TASKQ_API_KEY)
 
 module.exports = {
 	setApiKey: setApiKey,
+	verify: verify,
 	queue: queue
 }
 
 function setApiKey(newApiKey) {
+	apiKey = newApiKey
+	authorizationHeader = 'Bearer ' + newApiKey
 	options = getHttpsOptions(newApiKey)
+}
+
+function verify(authorization) {
+	if (authorization !== authorizationHeader) {
+		throw new Error('TaskQ.io: Invalid authorization header!')
+	}
 }
 
 function queue(url, params, callback) {
