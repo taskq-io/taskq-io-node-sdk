@@ -60,7 +60,7 @@ var express = require('express'),
 
 app.post('/tasks/sync_user', jsonParser, function (rq, rs) {
 	try {
-		TaskQ.verify(rq.headers['Authorization'])
+		TaskQ.verify(rq.headers['authorization'])
 	} catch(e) {
 		rs.sendStatus(401)
 		return
