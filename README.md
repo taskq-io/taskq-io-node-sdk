@@ -30,7 +30,7 @@ TaskQ.queue('/tasks/sync_user', {user_id: 'L1mxeDbCIdv7COIUjuJ9'}, function (err
 
 ## Running tasks
 
-The example above will make TaskQ execute `POST` request to `https://yourapp.heroku.com/tasks/sync_user` with JSON payload:
+The example above will make TaskQ execute `POST` request to `https://yourapp.herokuapp.com/tasks/sync_user` with JSON payload:
 
 ```json
 {
@@ -54,7 +54,7 @@ Example using [Express](https://expressjs.com/):
 ```javascript
 var express = require('express'),
 	bodyParser = require('body-parser'),
-	TaskQ = require('taskq'),
+	TaskQ = require('taskq.io'),
 	app = express(),
 	jsonParser = bodyParser.json()
 
