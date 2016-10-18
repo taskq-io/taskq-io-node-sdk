@@ -1,4 +1,5 @@
 var https = require('https'),
+	package = require('./package.json'),
 	apiKey = process.env.TASKQ_API_KEY,
 	authorizationHeader = 'Bearer ' + process.env.TASKQ_API_KEY,
 	options = getHttpsOptions(process.env.TASKQ_API_KEY)
@@ -69,6 +70,7 @@ function getHttpsOptions(apiKey) {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
+			'User-Agent': 'Node SDK ' + package.version,
 			'Authorization': 'Bearer ' + apiKey
 		}
 	};
