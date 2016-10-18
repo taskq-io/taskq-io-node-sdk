@@ -1,5 +1,7 @@
 This is [TaskQ.io](https://taskq.io) SDK for Node.js.
 
+This page explains how to use the SDK, but does not discuss aspects of TaskQ.io. Please visit [TaskQ.io](https://taskq.io) to get a full picture. 
+
 # Installation
 
 To install the SDK in your project, use:
@@ -38,15 +40,11 @@ The example above will make TaskQ execute `POST` request to `https://yourapp.her
 }
 ```
 
-**Always** remember to check `Authorization` header; otherwise somebody else than TaskQ might be sending reqests to you! 
+While handling tasks, **always** remember to check `Authorization` header; otherwise somebody else than TaskQ.io might be sending reqests to you! 
 The SDK provides convenience method to do that:
 
 ```javascript
-try {
-	TaskQ.verify(authorizationHeader)
-} catch(e) {
-	console.error(e)
-}
+TaskQ.verify(authorizationHeader)
 ```
 
 Example using [Express](https://expressjs.com/):
