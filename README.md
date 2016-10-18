@@ -1,6 +1,6 @@
 This is [TaskQ.io](https://taskq.io) SDK for Node.js.
 
-This page explains how to use the SDK, but does not discuss aspects of TaskQ.io. Please visit [TaskQ.io](https://taskq.io) to get a full picture. 
+This page explains how to use the SDK, but does not discuss all aspects of TaskQ.io. Please visit [TaskQ.io](https://taskq.io) to get a full picture. 
 
 # Installation
 
@@ -32,7 +32,7 @@ TaskQ.queue('/tasks/sync_user', {user_id: 'L1mxeDbCIdv7COIUjuJ9'}, function (err
 
 ## Running tasks
 
-The example above will make TaskQ execute `POST` request to `https://yourapp.herokuapp.com/tasks/sync_user` with JSON payload:
+The example above will make TaskQ.io execute `POST` request to `https://yourapp.herokuapp.com/tasks/sync_user` with JSON payload:
 
 ```json
 {
@@ -75,3 +75,5 @@ app.post('/tasks/sync_user', jsonParser, function (rq, rs) {
 	}
 })
 ```
+
+Your feedback is very welcome! Please use Github's issue tracker to report issues, request features, etc.
