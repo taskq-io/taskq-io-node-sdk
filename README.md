@@ -47,7 +47,9 @@ The SDK provides convenience method to do that:
 TaskQ.verify(authorizationHeader)
 ```
 
-Example using [Express](https://expressjs.com/):
+`verify` method will throw an error in case of invalid `Authorization` header.
+
+Below is an example of running tasks using [Express](https://expressjs.com/):
 
 ```javascript
 var express = require('express'),
